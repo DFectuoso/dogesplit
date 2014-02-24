@@ -21,5 +21,12 @@
 		<div class="copyright">
 			 Made by Santiago Zavala, you can find the code in <a href="https://github.com/DFectuoso/dogesplit">Github</a>
 		</div>
+
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script>
+			$(document).ready(function() {
+	    	    {% block javascript %}{% endblock %}
+			});
+        </script>
 	</body>
 </html>

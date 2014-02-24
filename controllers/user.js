@@ -27,8 +27,4 @@ userController.get('/logout', function (req, res) {
 	res.redirect('/');
 });
 
-userController.get('/profile', User.isLoggedIn, function (req, res) {
-	res.render('user/profile');
-});
-
 module.exports = userController;

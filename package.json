@@ -20,6 +20,9 @@
     "mongoosastic": "~0.2.3",
     "stackers": "0.0.10",
     "connect-flash" : "~0.1.1",
-    "bcrypt-nodejs" : "latest"
+    "bcrypt-nodejs" : "latest",
+    "request": "~2.33.0",
+    "validator": "~3.2.0",
+    "cron" : "latest"
   }
 }

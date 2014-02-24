@@ -3,11 +3,15 @@
 {% block content %}
 
 	<h3>Your Addresses:</h3>
-
+	<ul>
+		{% for address in addresses %}
+			<li><a href="/address/{{address.hash}}">{{address.hash}}</a></li>
+		{% endfor %}
+	</ul>
 
 	<h4>Actions:</h4>
 	<ul>
-		<li><a href="#">Create new address</a></li>
+		<li><a href="/new-address">Create new address</a></li>
 		<li><a href="/user/logout">Logout</a></li>
 	</ul>
 {% endblock %}

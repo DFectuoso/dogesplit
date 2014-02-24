@@ -1,0 +1,67 @@
+{% extends '../layouts/layout.html' %}
+
+
+{% block content %}
+	<div class="page-content">
+		<h3>Rules for Addrees: <strong>{{address.hash}}</strong></h3>
+
+		<p>Add as many addreses where to split the doge</p>
+		<p>Every minute, we check all transactions and split the money, make sure your percentaje sums up 100.0</p>
+
+		<p style="color:red">{{error}}</p>
+
+		<form method="POST">
+			<div id="addresses">
+
+				{% for target in address.targets %}
+					<div>
+						Address:
+						<input type="text" name="targetAddress[]" value="{{target.addressHash}}">
+						Percentaje:
+						<input type="text" name="percentaje[]" value="{{target.percentaje}}">
+						<a href="javascript:void(0);" class="remove-link">X</a>
+					</div>
+				{% endfor %}
+
+			</div>
+
+			<div>
+				<a href="javascript:void(0);" class="add-link">Add another address</a>
+			</div>
+			<div>
+				<input type="submit">
+			</div>
+		</form>
+		<div class=""
+	</div>
+
+
+<div style="display:none" id="addressTemplate">
+	Address:
+	<input type="text" name="targetAddress[]">
+	Percentaje:
+	<input type="text" name="percentaje[]">
+	<a href="javascript:void(0);" class="remove-link">X</a>
+</div>
+
+
+{% endblock %}
+
+{% block javascript %}
+
+
+
+$(".remove-link").on("click", function(){
+	$(this).closest('div').remove();
+})
+
+$(".add-link").on("click", function(){
+	$( "#addressTemplate").clone().removeAttr('id').show().appendTo( "#addresses" );
+	$(".remove-link").on("click", function(){
+		$(this).closest('div').remove();
+	})
+})
+
+$(".add-link").click();
+
+{% endblock %}
