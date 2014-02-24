@@ -1,0 +1,9 @@
+{
+	"redis" : {
+		"secret" : "keep the secret",
+		"options" : {}
+	},
+	"mongoDb" : {
+		"db" : "dogesplit"
+	}
+}

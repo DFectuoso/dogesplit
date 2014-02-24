@@ -1,0 +1,23 @@
+Dogesplit
+
+Dogesplit is a proof of concept app using express and DogeAPI to create dogecoin adddreses that you can use to automatically disperse fund to other addreses.
+Use cases include small mining operations that want to split mined doge into multiple accounts to keep track of electricity or split funds between different friends who paid for the rigs.
+
+Todo:
+- Create a Express App
+- Add passport local
+- Generate a simple landing page
+- Login takes you to a dashboard, where we list all of your addreses
+- Have a Address model
+- New Addreess button
+- Create (or click on an address) takes you to the detail
+- Only right user can see that address/modify it
+- You can add as many addreses(with a porcentaje) to it
+- You can add emails to it, to be notified
+- There is a Cron to check the balance of the whole wallet, if it's more than last time, check every address
+- Disperse the money and email people
+- Post code/hosted version to reddit and wait
+- Make sure to mention the 0.5% charged by dogeapi, add a simple "donate" button for other 0.5%
+
+
+
